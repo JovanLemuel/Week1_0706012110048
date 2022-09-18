@@ -10,17 +10,11 @@ import android.os.Handler
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.example.week1_0706012110048.databinding.ActivitySplashScreenBinding
 
 class SplashScreenActivity : AppCompatActivity() {
 
-    private lateinit var binding:ActivitySplashScreenBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySplashScreenBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
         supportActionBar?.hide()
         CheckPermissions()
         Handler().postDelayed({
@@ -36,7 +30,6 @@ class SplashScreenActivity : AppCompatActivity() {
         } else {
             Toast.makeText(this, "Storage Permission already granted", Toast.LENGTH_SHORT).show()
         }
-
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED) {
 
             ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE), GlobalVar.STORAGE_PERMISSION_CODE)

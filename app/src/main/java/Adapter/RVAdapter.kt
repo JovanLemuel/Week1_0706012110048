@@ -15,29 +15,29 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.week1_0706012110048.MainActivity
 import com.example.week1_0706012110048.InputActivity
 import com.example.week1_0706012110048.R
-import com.example.week1_0706012110048.databinding.CardviewBinding
+import com.example.week1_0706012110048.databinding.CardLayoutBinding
 
-class RVAdapter(val list:ArrayList<Model>, val cardListener: CardListener):
+class RVAdapter(val listData:ArrayList<Model>, val cardListener: CardListener):
     RecyclerView.Adapter<RVAdapter.viewHolder>() {
 
     class viewHolder(itemView: View, val cardlistener1: CardListener):RecyclerView.ViewHolder(itemView){
-        val binding = CardviewBinding.bind(itemView)
+        val binding = CardLayoutBinding.bind(itemView)
 
         fun setdata(data:Model){
-            binding.nameTextview.text=data.name
-            binding.typeCard.text=data.type
-            binding.ageCard.text=data.age
+            binding.nameText.text=data.name
+            binding.typeText.text=data.type
+            binding.ageText.text=data.age
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
-        val view = layoutInflater.inflate(R.layout.cardview, parent, false)
+        val view = layoutInflater.inflate(R.layout.card_layout, parent, false)
         return viewHolder(view, cardListener)
     }
 
     override fun onBindViewHolder(holder: viewHolder, position: Int) {
-        holder.setdata(listHewan[position])
+        holder.setdata(listData[position])
         holder.binding.deleteButton.setOnClickListener {
             val alertDialog = AlertDialog.Builder(it.context)
             alertDialog.apply {
@@ -59,7 +59,7 @@ class RVAdapter(val list:ArrayList<Model>, val cardListener: CardListener):
     }
 
     override fun getItemCount(): Int {
-        return list.size
+        return listData.size
     }
 
 }

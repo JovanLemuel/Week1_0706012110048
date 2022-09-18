@@ -6,6 +6,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.week1_0706012110048.databinding.ActivityMainBinding
+import com.example.week1_0706012110048.databinding.CardLayoutBinding
 import Database.GlobalVar.Companion.listData
 import Interface.CardListener
 import android.Manifest
@@ -19,7 +20,6 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.week1_0706012110048.databinding.CardviewBinding
 import com.google.android.gms.ads.mediation.Adapter
 
 class MainActivity : AppCompatActivity(), CardListener {
@@ -33,7 +33,6 @@ class MainActivity : AppCompatActivity(), CardListener {
         setContentView(binding.root)
         supportActionBar?.hide()
         setupRecyclerView()
-        hidetext()
         listener()
     }
 
@@ -48,14 +47,6 @@ class MainActivity : AppCompatActivity(), CardListener {
     override fun onResume() {
         super.onResume()
         adapter.notifyDataSetChanged()
-    }
-
-    private fun hidetext(){
-        if(listData.isEmpty()){
-            binding.addTextview.isVisible = true
-        } else {
-            binding.addTextview.isInvisible = true
-        }
     }
 
     private fun setupRecyclerView(){
