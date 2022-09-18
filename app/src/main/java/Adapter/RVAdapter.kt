@@ -39,18 +39,9 @@ class RVAdapter(val listData:ArrayList<Model>, val cardListener: CardListener):
     override fun onBindViewHolder(holder: viewHolder, position: Int) {
         holder.setdata(listData[position])
         holder.binding.deleteButton.setOnClickListener {
-            val alertDialog = AlertDialog.Builder(it.context)
-            alertDialog.apply {
-                setTitle("Konfirmasi")
-                setMessage("Apakah anda yakin untuk mendelete hewan ini?")
-                setNegativeButton("No", { dialogInterface, i -> dialogInterface.dismiss() })
-                setPositiveButton("Yes", { dialogInterface, i -> dialogInterface.dismiss()
-                    GlobalVar.listData.removeAt(position)
-                    notifyDataSetChanged()
-                    Toast.makeText(it.context, "Hewan Berhasil Di Hapus", Toast.LENGTH_SHORT).show()
-                })
-                alertDialog.show()
-            }
+            GlobalVar.listData.removeAt(position)
+            notifyDataSetChanged()
+            Toast.makeText(it.context, "Success", Toast.LENGTH_SHORT).show()
         }
         holder.binding.editButton.setOnClickListener {
             val intent = Intent(it.context, InputActivity::class.java).putExtra("position",position)

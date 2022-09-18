@@ -51,8 +51,8 @@ class MainActivity : AppCompatActivity(), CardListener {
 
     private fun setupRecyclerView(){
         val layoutManager = LinearLayoutManager(baseContext)
-        binding.mainRV.layoutManager= layoutManager //Set layout
-        binding.mainRV.adapter=adapter //Set adapter
+        binding.mainRV.layoutManager= layoutManager
+        binding.mainRV.adapter=adapter
     }
 
 
