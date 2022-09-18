@@ -18,9 +18,8 @@
 
     <ImageButton
         android:id="@+id/backButton"
-        android:layout_width="50dpdp"
-        android:layout_height="50dp
-"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

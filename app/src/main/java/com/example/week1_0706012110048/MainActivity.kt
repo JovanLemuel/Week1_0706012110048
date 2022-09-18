@@ -20,7 +20,6 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.gms.ads.mediation.Adapter
 
 class MainActivity : AppCompatActivity(), CardListener {
 

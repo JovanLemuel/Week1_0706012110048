@@ -7,6 +7,7 @@ import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -17,7 +18,7 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
         CheckPermissions()
-        Handler().postDelayed({
+        Handler(Looper.getMainLooper()).postDelayed({
             val myIntent = Intent(this,MainActivity::class.java)
             startActivity(myIntent)
         },3000)
