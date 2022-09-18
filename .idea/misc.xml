@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Jovan/AndroidStudioProjects/Week1_0706012110048/app/src/main/res/drawable/animalImage_background.xml" value="0.299" />
+        <entry key="..\:/Users/Jovan/AndroidStudioProjects/Week1_0706012110048/app/src/main/res/drawable/animalImage_foreground.xml" value="0.299" />
+        <entry key="..\:/Users/Jovan/AndroidStudioProjects/Week1_0706012110048/app/src/main/res/layout/activity_input.xml" value="0.3458333333333333" />
+        <entry key="..\:/Users/Jovan/AndroidStudioProjects/Week1_0706012110048/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Jovan/AndroidStudioProjects/Week1_0706012110048/app/src/main/res/layout/activity_splashscreen.xml" value="0.346875" />
+        <entry key="..\:/Users/Jovan/AndroidStudioProjects/Week1_0706012110048/app/src/main/res/layout/card_layout.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
